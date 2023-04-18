@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Patient>
+@{
+    ViewData["Title"] = "Patients";
+}
+
+<p style="text-align: center"><h2>Patients</h2></p>
+<p><a asp-action="AddPatient">Add patient</a></p>
+
+<table border="1" style="border-collapse: collapse; width: 100%;">
+    <tbody>
+        <tr style="border: 1px solid black;">
+            <td style="border: 1px solid black;"> <strong>ID</strong> </td>
+            <td style="border: 1px solid black;"> <strong>First name</strong> </td>
+            <td style="border: 1px solid black;"> <strong>Second name</strong> </td>
+            <td style="border: 1px solid black;"> <strong>Complaints</strong> </td>
+        </tr>
+        @foreach (var patient in Model)
+        {
+                <tr style="border: 1px solid black;">
+                    <td style="border: 1px solid black;"> @patient.Id </td>
+                    <td style="border: 1px solid black;"> @patient.FirstName </td>
+                    <td style="border: 1px solid black;"> @patient.SecondName </td>
+                    <td style="border: 1px solid black;"> @patient.Complaints </td>
+                </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,20 @@
+﻿@model Patient
+
+<h2>Adding patient</h2>
+<form asp-action="AddPatient" asp-controller="Home">
+    <p>
+        <label asp-for="FirstName">First name</label><br />
+        <input type="text" asp-for="FirstName" />
+    </p>
+    <p>
+        <label asp-for="SecondName">Second name</label><br />
+        <input type="text" asp-for="SecondName" />
+    </p>
+    <p>
+        <label asp-for="Complaints">Complaints</label><br />
+        <input type="text" asp-for="Complaints" />
+    </p>
+    <p>
+        <input type="submit" value="Submit" />
+    </p>
+</form>
