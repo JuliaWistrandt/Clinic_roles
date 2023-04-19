@@ -1,14 +1,18 @@
 ﻿using Clinic_IndividualWork_KazanovAlexandr.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Clinic_IndividualWork_KazanovAlexandr.Context
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<IdentityUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
+
         }
+
 
 
         public DbSet<ClinicDepartment> ClinicDepartment { get; set; } = null!;
